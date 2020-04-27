@@ -1,38 +1,60 @@
-.App {
-  text-align: center;
+
+html {
+  font: 14px "Century Gothic", Futura, sans-serif;
+  overflow: hidden;
+  height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  position: fixed;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  height: 100%;
+  width: 100%;
+  margin-left: 0%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#root {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  overflow: hidden;
+  height: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.drawArea {
+  max-width: 400px;
+  max-height: 400px;
+  width: 90%;
+  height: 50%;
+  border: 1px solid black;
+  float: left;
+  cursor: crosshair;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.path {
+  fill: none;
+  /* stroke-width: 1px;
+  stroke: black; */
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.color-pickers {
+  display: flex;
+}
+
+.color-pickers-box {
+  height: 30px;
+  width: 30px;
+  margin: 10px;
+}
+
+.config {
+  display: flex;
+  margin-top: 20px;
+}
+
+.drawing {
+  width: 100%;
+  height: 100%;
 }
